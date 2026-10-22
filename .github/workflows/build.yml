@@ -21,18 +21,18 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
 
       - name: Install Capacitor
         run: |
           npm init -y
           npm install @capacitor/core @capacitor/cli @capacitor/android
-          npx cap add android
 
       - name: Prepare website
         run: |
           mkdir -p www
           cp index.html www/index.html
+          npx cap add android
           npx cap sync android
 
       - name: Build APK
@@ -46,3 +46,4 @@ jobs:
         with:
           name: Web2APK-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          
