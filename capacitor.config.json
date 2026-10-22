@@ -1,0 +1,9 @@
+
+{
+  "appId": "com.web2apk.studio",
+  "appName": "Web2APK Studio",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
